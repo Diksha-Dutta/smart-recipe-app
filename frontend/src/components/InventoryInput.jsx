@@ -18,7 +18,7 @@ const InventoryInput = () => {
       formData.append('ingredients', ingredients);
       if (image) formData.append('image', image);
 
-      const res = await fetch('http://localhost:5000/api/recipes/generate', {
+      const res = await fetch('https://srecipegenerator-backend.vercel.app/api/recipes/generate', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,

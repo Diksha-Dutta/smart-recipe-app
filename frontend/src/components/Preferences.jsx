@@ -17,7 +17,7 @@ const Preferences = () => {
     setError('');
 
     try {
-      const res = await fetch('http://localhost:5000/api/user/preferences', {
+      const res = await fetch('https://srecipegenerator-backend.vercel.app/api/user/preferences', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

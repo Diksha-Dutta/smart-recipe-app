@@ -19,7 +19,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/user', {
+        const res = await fetch('https://srecipegenerator-backend.vercel.app/api/user', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
 
@@ -46,7 +46,7 @@ const Profile = () => {
     setError('');
 
     try {
-      const res = await fetch('http://localhost:5000/api/user', {
+      const res = await fetch('https://srecipegenerator-backend.vercel.app/api/user', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -78,7 +78,7 @@ const Profile = () => {
     setError('');
 
     try {
-      const res = await fetch('http://localhost:5000/api/user/preferences', {
+      const res = await fetch('https://srecipegenerator-backend.vercel.app/api/user/preferences', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
